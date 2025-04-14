@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Admin - Chỉnh sửa giao diện</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f5f5f5; }
+    input, textarea { width: 100%; margin-bottom: 10px; padding: 10px; }
+    button { padding: 10px 20px; background: #028090; color: white; border: none; }
+  </style>
+</head>
+<body>
+  <h2>🎨 Chỉnh sửa nội dung trang chủ</h2>
+
+  <label>Tiêu đề chính (Banner):</label>
+  <input id="mainTitle" value="CONSTRUCTION">
+
+  <label>Tiêu đề phụ:</label>
+  <input id="subTitle" value="BUILDING">
+
+  <label>Mô tả banner:</label>
+  <textarea id="description">Lorem Ipsum mô tả ở đây...</textarea>
+
+  <button onclick="saveChanges()">💾 Lưu thay đổi</button>
+
+  <script>
+    function saveChanges() {
+      const mainTitle = document.getElementById("mainTitle").value;
+      const subTitle = document.getElementById("subTitle").value;
+      const description = document.getElementById("description").value;
+
+      // Lưu localStorage (demo)
+      const homepageData = { mainTitle, subTitle, description };
+      localStorage.setItem("homepageContent", JSON.stringify(homepageData));
+
+      alert("Đã lưu thành công. Hãy tải lại trang chủ để xem kết quả.");
+    }
+  </script>
+</body>
+</html>
