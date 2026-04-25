@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: neo-era/lavipco-website   # ← THAY TÊN USERNAME CỦA BẠN VÀO ĐÂY
+  repo: neo-era/lavipco   # ← THAY TÊN USERNAME CỦA BẠN VÀO ĐÂY
   branch: main
 
 media_folder: "public/media"
