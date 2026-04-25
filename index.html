@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lâm Việt Phát - Chiếu Sáng Thông Minh</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #FF8C00 0%, #1A237E 100%);
+            --text-dark: #2D3436;
+            --bg-light: #F9FAFB;
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            background-color: #fff;
+            line-height: 1.6;
+        }
+
+        /* Hero Section */
+        .hero {
+            height: 90vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=1600&q=80'); /* Hình nền thành phố */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .btn-cta {
+            background: var(--primary-gradient);
+            color: white;
+            padding: 15px 35px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.3s;
+            border: none;
+        }
+
+        .btn-cta:hover {
+            transform: scale(1.05);
+        }
+
+        /* Services Section */
+        .services {
+            padding: 80px 10%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            background: var(--bg-light);
+        }
+
+        .service-card {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .icon {
+            font-size: 40px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 10%;
+            text-align: center;
+        }
+
+        .testimonial-slider {
+            display: flex;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px 0;
+            scroll-snap-type: x mandatory;
+        }
+
+        .testimonial-item {
+            min-width: 300px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            border: 1px solid #eee;
+            scroll-snap-align: center;
+        }
+
+        .user-img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+            object-fit: cover;
+        }
+
+        /* Project Section */
+        .projects {
+            padding: 80px 10%;
+        }
+
+        .project-img {
+            width: 100%;
+            height: 400px;
+            border-radius: 25px;
+            object-fit: cover;
+            margin-top: 30px;
+        }
+
+        h2 { font-size: 2.5rem; text-align: center; margin-bottom: 50px; }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        <div class="hero-content">
+            <p style="text-transform: uppercase; letter-spacing: 2px;">Công ty TNHH Kỹ Nghệ Lâm Việt Phát</p>
+            <h1>Cho cuộc sống năng động hơn</h1>
+            <p style="font-size: 1.2rem; margin-bottom: 40px;">Giải pháp chiếu sáng thông minh & Mỹ thuật đô thị hàng đầu.</p>
+            <a href="#" class="btn-cta">Khám phá giải pháp</a>
+        </div>
+    </section>
+
+    <section class="services">
+        <div class="service-card">
+            <span class="icon">🛒</span>
+            <h3>Mua Sắm</h3>
+            <p>Cung cấp thiết bị đèn LED và hệ thống điều khiển thông minh chính hãng.</p>
+        </div>
+        <div class="service-card">
+            <span class="icon">📈</span>
+            <h3>Đầu Tư</h3>
+            <p>Hợp tác đầu tư các dự án chiếu sáng công cộng và tiết kiệm năng lượng.</p>
+        </div>
+        <div class="service-card">
+            <span class="icon">🏗️</span>
+            <h3>Thi Công</h3>
+            <p>Đội ngũ kỹ sư giàu kinh nghiệm thực hiện lắp đặt và vận hành hệ thống.</p>
+        </div>
+    </section>
+
+    <section class="projects">
+        <h2>Công trình tiêu biểu</h2>
+        <p style="text-align: center;">Chiếu sáng đường phố và kiến trúc mỹ thuật tại các đô thị lớn.</p>
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1200&q=80" alt="Chiếu sáng đường phố" class="project-img">
+    </section>
+
+    <section class="testimonials">
+        <h2>Khách hàng nói gì về chúng tôi</h2>
+        <div class="testimonial-slider">
+            <div class="testimonial-item">
+                <img src="https://i.pravatar.cc/150?u=1" class="user-img" alt="User">
+                <p>"Giải pháp chiếu sáng của Lâm Việt Phát giúp tòa nhà của chúng tôi tiết kiệm 40% điện năng."</p>
+                <strong>- Nguyễn Văn A (Giám đốc dự án)</strong>
+            </div>
+            <div class="testimonial-item">
+                <img src="https://i.pravatar.cc/150?u=2" class="user-img" alt="User">
+                <p>"Hệ thống điều khiển thông minh cực kỳ dễ sử dụng và ổn định."</p>
+                <strong>- Trần Thị B (KTS)</strong>
+            </div>
+            <div class="testimonial-item">
+                <img src="https://i.pravatar.cc/150?u=3" class="user-img" alt="User">
+                <p>"Thi công nhanh chóng, đúng tiến độ và rất chuyên nghiệp."</p>
+                <strong>- Lê Văn C (Chủ đầu tư)</strong>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
